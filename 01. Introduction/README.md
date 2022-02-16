@@ -18,7 +18,7 @@ The only difference between React and angular is that react at its core is only 
 
 Reacts gives us a way to build websites & UIs with organized and reusable components.So components can include the output, which is the basically the HTML in react to use something called JSX. And we'll get into that later.The logic or the Javascript and you can also include the styling or the CSS within the components as well, which is a little different.
 
-![**UI Component**](./images/compoent.png)
+![**UI Component**](./images/component.png)
 
 ### Why Learn React?
 > Why not just build all your front ends with just HTML, CSS and vanilla Javascript? Well, as I said before, things used to be really messy with no consistency you'd have everything would be separate.
@@ -38,7 +38,7 @@ Reacts gives us a way to build websites & UIs with organized and reusable compon
 >
 > So if we we look at this code here, you don't really have to understand react to be able to visualize what this would look like in a browser.
 
-![**Declarative code](./images/declarative_code.png)
+![**Declarative code**](./images/declarative_code.png)
 
 > So each one of these tags that we're looking at is a component.We have the app itself then we have a `header` and `employee search` and `employee list` and a `footer component`. And this is how we embed components. It's similar to just an XML syntax, and components can slo have `props` passed in which are basically attributes or arguments that can be passed to that components. So here we have a `title pop prop` passed into a header component, and it could be just a regular string or any data type, as well as a function.
 >
