@@ -52,6 +52,26 @@ Reacts gives us a way to build websites & UIs with organized and reusable compon
 
 The first project, the feedback app, we're going to talk about these four things in depth and look at all the syntax to create and use them.
 
+## Environment Setup
+> Things that you will need to install so as to  build react application, and it's not much since react is a client side Javascript framework, so we don't need too much.
+>
+>> But there are couple of things that we need.So one is going to be `Node.js`, you want to install that on your machine. And the reason for that is or a couple of reasons, one, because we nee `npm`, which is ht node package manager.We're going to be using that to set up Create React app, which is a command line tool to basically give us a boilerplate app to start with.And then well also have some third party packages that we're going to need to install with npm as well.
+>
+>> And then in the four project, it will bbe full stack burn project Merlin as MongoDB Express, React and Node.js, so you will need it for that as well. Install Long Support Version
+>
+>> So the next thing that you will need to install is text editor. I would recommend Visual Studio Code.
+>
+>>So the next thing is installing git in your machine.
+>
+>> And then the React developer tools for either Chrome or Firefox.
+>
+>> And then Postman is an FTP client that we'll be using through the course,and it's just used to make ACDP request to either your own backend or to third part API.
+
+### Code Repos
+[Link to Resource](./link_to_resource.html)
+
+
+
 
 
 
