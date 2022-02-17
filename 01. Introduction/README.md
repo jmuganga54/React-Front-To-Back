@@ -7,7 +7,7 @@ This project has being divided into two section, first being a feedback app. And
 > 
 > We'll be using the latest version of Firebase, which is version 9 and we'll be using the latest version of React router version 6. 
 
-## Keywords && Points
+## Keywords &&  Notes
 
 ### What is React?
 > React is a Javascript library created and maintained by Facebook that's used for building user interfaces so it's technically a UI library. Now you've probably heard React refereed to as a framework more than a library.
@@ -70,10 +70,5 @@ The first project, the feedback app, we're going to talk about these four things
 ### Code Repos
 [Link to Resource](./link_to_resource.html)
 
-
-
-
-
-
-
 ## Summary
+> On this section we have learned about React( What is React), Why do we need to learn React, some of the major building blocks of React and what we need on our environment to be able to build react application.
