@@ -69,6 +69,10 @@ The first project, the feedback app, we're going to talk about these four things
 
 ### Code Repos
 [Link to Resource](./link_to_resource.html)
+[Feedback Application Code Repo](https://github.com/bradtraversy/feedback-app)
+[git-finder-app Code Repo](https://github.com/bradtraversy/github-finder-app)
+[house-marketplace app Code Repo](https://github.com/bradtraversy/house-marketplace)
+[bradtraversy](https://gist.github.com/bradtraversy)
 
 ## Summary
 > On this section we have learned about React( What is React), Why do we need to learn React, some of the major building blocks of React and what we need on our environment to be able to build react application.
