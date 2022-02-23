@@ -68,5 +68,87 @@ ReactDOM.render(
 > 
 > There's a lot of different ways to do styling in react. I would say the easiest way is to just have a global style sheet with all your classes and so on. And that's what we're going to do in this particular project.And the way that we can bring this in is in our index.js.
 
+### Intro To JSX
+> JSX it's basically HTML. However, it's syntactic sugar, it's really Javascript under the hood.It just allows us to write HTML within our components, which makes it much more convenient.
+>
+> Now there are some rules, for example an error message can occur which says JSX expressions must have one parent element. What that means is what we return directly has to be just one main or parent element.So we can't have an <h1> and <p> or any two or more elements, it has to be one.
+>
+> So in this case, what we would do is we could have a div and then we could take this and put that in.
+>
+```
+ return ( 
+     <div >
+        <h1 > My App </h1>   
+        <p> Hellow </p> 
+    </div>
+
+    )
+```
+> Ok, so just remember that you always have to have one parent element. Now you might not want to have a div wrapping all the content.So if you don't want the dive, we still have to have something wrapping this, but we can use what's called a `fragment`, which is just an empty angle bracket like the below
+>
+```
+ return ( 
+     < >
+        <h1 > My App </h1>   
+        <p> Hellow </p> 
+    </>
+
+```
+> There are some differences between HTML and JSX. There's some attributes that you can't use. So, for instance, class, let's say that I'm actually going to want a div.
+>
+```
+ return ( 
+     <div class = 'container'>
+        <h1 > My App </h1>   
+        <p> Hellow </p> 
+    </div>
+
+    )
+```
+> The above code will work, but when we see on the console,in our browser, we will see an error `Invalid DOM property class`. Did you mean class name?. So classes, it's basically a reserved word. So we can't use a class attribute here instead in React, or I should sya in JSX, we use `className` instead of `class`.
+>
+```
+ return ( 
+     <div className = 'container'>
+        <h1 > My App </h1>   
+        <p> Hellow </p> 
+    </div>
+
+    )
+```
+>
+> Now, another attribute that you can't use in JSX is the `for` attribute, which isn't that common, so instead we use `htmlFor`
+```
+  return (
+        <div className='container' >
+            <h1> My App </h1>
+            <p> Hellow </p>
+            <label htmlFor=""></label>
+        
+        </div>
+
+    )
+```
+>
+> So those are the two big attributes that are different than just regular HTML
+>
+> Now I want to show you how we could get the above, the same thing without using JSX, just using Javascript.So basically showing you what's happening under the hood when we do this.
+>
+>And up until just very recently, a recent release, you had to do this no mater what (import React from 'react') on all of your components, you had to import react, if you were using JSX, you don't have to anymore, but you used to. So the below code does exactly what we just had in JSX only this is regular Javascript. And this might not look too bad, but just imagine if you had just a ton of HTML with different components and different elements and attributes and props. This would be an absolute nightmare to work with. So that's why JSX is so great, and it's why nobody virtually nobody builds components without it.
+```
+import React from 'react'
+function App() {
+    /**
+     * you pass the element that you want to create (first argument), 
+     * second argument are attributes you want to attach to a 
+     * created element
+     */
+    return React.createElement('div', { className: 'container' },
+        React.createElement('h1', {}, 'My App'))
+
+}
+```
+> So this is kind of an intro to JSX. We didn't really look at anything dynamic because you can output values and variables and expressions and all that.So we're going to dive into that a little bit in the next session.
+
 
 ## Summary
