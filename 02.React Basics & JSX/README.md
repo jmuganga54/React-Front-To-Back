@@ -71,7 +71,7 @@ ReactDOM.render(
 ### Intro To JSX
 > JSX it's basically HTML. However, it's syntactic sugar, it's really Javascript under the hood.It just allows us to write HTML within our components, which makes it much more convenient.
 >
-> Now there are some rules, for example an error message can occur which says JSX expressions must have one parent element. What that means is what we return directly has to be just one main or parent element.So we can't have an <h1> and <p> or any two or more elements, it has to be one.
+> Now there are some rules, for example an error message can occur which says JSX expressions must have one parent element. What that means is what we return directly has to be just one main or parent element.So we can't have an `<h1> and <p>` or any two or more elements, it has to be one.
 >
 > So in this case, what we would do is we could have a div and then we could take this and put that in.
 >
