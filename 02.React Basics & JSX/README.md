@@ -84,7 +84,7 @@ ReactDOM.render(
 
     )
 ```
-> Ok, so just remember that you always have to have one parent element. Now you might not want to have a div wrapping all the content.So if you don't want the dive, we still have to have something wrapping this, but we can use what's called a `fragment`, which is just an empty angle bracket like the below
+> Ok, so just remember that you always have to have one parent element. Now you might not want to have a div wrapping all the content.So if you don't want the div, we still have to have something wrapping this, but we can use what's called a `fragment`, which is just an empty angle bracket like the below
 >
 ```
  return ( 
@@ -105,13 +105,13 @@ ReactDOM.render(
 
     )
 ```
-> The above code will work, but when we see on the console,in our browser, we will see an error `Invalid DOM property class`. Did you mean class name?. So classes, it's basically a reserved word. So we can't use a class attribute here instead in React, or I should sya in JSX, we use `className` instead of `class`.
+> The above code will work, but when we see on the console,in our browser, we will see an error `Invalid DOM property class`. Did you mean class name?. So classes, it's basically a reserved word. So we can't use a class attribute here instead in React, or I should say in JSX, we use `className` instead of `class`.
 >
 ```
  return ( 
      <div className = 'container'>
         <h1 > My App </h1>   
-        <p> Hellow </p> 
+        <p> Hello </p> 
     </div>
 
     )
@@ -150,5 +150,90 @@ function App() {
 ```
 > So this is kind of an intro to JSX. We didn't really look at anything dynamic because you can output values and variables and expressions and all that.So we're going to dive into that a little bit in the next session.
 
+### Dynamic Values & lists in JSX
+> In this session we're going to kind of go over some of the basics of components and JSX and outputting dynamic values.We're going to look at creating lists which basically allow us to loop through an array of values and output and JSX for each item.
+>
+> And in the next session , we'll look at conditions.
+>
+> And to output something dynamic like a variable or expression, we just use curly braces. So here we could put our title.
+
+```
+function App() {
+
+    const title = 'Blog post'
+    const body = 'This is my blog post'
+    /**
+     * Now, usually if you have variables like this, let's say this was 
+     * a blog post component, this would put this data would probably
+     * be part of your state. And this is not how you set state in react, in 
+     * functional components there's a hook special hook that you use called
+     * `use state`, and I'm going to get to that later.
+     * 
+     * 
+     */
+  
+
+    return (
+        <div className='container' >
+            <h1>{title}</h1>
+            <p>{body}</p>
+        </div>
+
+    )
+}
+```
+> Like I said, these curly braces can be used not only for variables, but also for any type of expression,So if I put in curly braces an expression `{5+5}`, it will be evaluated as 10. I could even put like `{Math.randon() *(5+5)}', which will give us some random decimal up to 10.So you can put pretty much any Javascript expression in here.Even this is Ok {title.toUpperCase()}
+>
+> So now what I want to do is show you how you can create a list because you might have an array.
+```
+function App() {
+
+    const title = 'Blog post'
+    const body = 'This is my blog post'
+    const comments = [
+        { id: 1, text: 'Comment one' },
+        { id: 2, text: 'Comment two' },
+        { id: 3, text: 'Comment three' }
+    ]
+    /**
+     * Now, usually if you have variables like this, let's say this was 
+     * a blog post component, this would put this data would probably
+     * be part of your state. And this is not how you set state in react, in 
+     * functional components there's a hook special hook that you use called
+     * `use state`, and I'm going to get to that later.
+     * 
+     * 
+     */
+
+
+    return (
+        <div className='container' >
+            <h1>{title.toUpperCase()}</h1>
+            <p>{body}</p>
+            <div className="comments">
+                <h3>Comments ({comments.length})</h3>
+                <ul>
+                    {comments.map((comment, index) => (
+                        /**
+                         * So we need to pass on a key that's unique and 
+                         * we're going to set that so you can set a prop
+                         * or an attribute to something dynamic with curly 
+                         * braces. And in here we'll just use index, which
+                         * is coming from map function. You could also use 
+                         * the comment id because that 's going to be unique
+                         * as well.
+                         * 
+                         * So just make sure when you create a list  using
+                         * map that you add a key onto the child prop
+                         */
+                        <li key={index}>{comment.text}</li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    )
+}
+```
+> So that's how we can outuput variables, expression, creating lists. In the next session we will learn about conditionals
 
 ## Summary

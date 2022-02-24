@@ -22,10 +22,8 @@ import App from './App'
  * library`. We're calling React DOM render passing in our main app
  * component, and that's bring output into that <div> with the idea of root.
  */
-ReactDOM.render( <
-    React.StrictMode >
-    <
-    App / >
-    <
-    /React.StrictMode>,
+ReactDOM.render( 
+    < React.StrictMode >
+    <App/>
+    </React.StrictMode>,
     document.getElementById('root'))
