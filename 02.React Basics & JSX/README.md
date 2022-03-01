@@ -243,8 +243,9 @@ function App() {
 ```
  if (loading) return <h1>Loading...</h1>
 ```
->
+>So in the next section of the course, we're going to go ahead and start on a first component, our firs custom component, which is going to be the header.
 
+On how 
 ## Summary
 > On this section on the course, we have learn some of the foundation of react, this foundation includes how we can output dynamic values, create lists and conditionals.
 
@@ -318,10 +319,6 @@ function App() {
      * go ahead and, you know, render the actual data because you don't
      * want to try to render data before you actually fetch it.
      */
-
-
-
-
 
     /**
      * Now, usually if you have variables like this, let's say this was 
